@@ -47,16 +47,22 @@ ul{padding:0 0 5px 5px;list-style:none}li{line-height:16px}
 			document.getElementById("mySidebar").style.display = "none";
 			document.getElementById("myOverlay").style.display = "none";
 		};
+
+		function googlesearch() {
+			var sValue = document.getElementById("sValue").value;
+			window.open("https://www.google.com/search?q=" + sValue + "");
+		};
+
+		function bingsearch() {
+			var sValue = document.getElementById("sValue").value;
+			window.open("https://www.bing.com/search?q=" + sValue + "");
+		};
 		
 		function baidusearch() {
 			var sValue = document.getElementById("sValue").value;
 			window.open("https://www.baidu.com/s?wd=" + sValue + "");
 		};
 
-		function googlesearch() {
-			var sValue = document.getElementById("sValue").value;
-			window.open("https://www.google.com/search?q=" + sValue + "");
-		};
 		
 	</script>
 
@@ -91,7 +97,8 @@ ul{padding:0 0 5px 5px;list-style:none}li{line-height:16px}
 		<!-- Sidebar Search bar -->
 		<div>
 			<input type="text" id="sValue" style="width:95%" ><br>
-			<button id="searchBtn" onclick="googlesearch()" >  &nbsp; Google &nbsp;</button>
+			<button id="searchBtn" onclick="googlesearch()" >  &nbsp; Google &nbsp;</button> &nbsp;&nbsp;&nbsp;
+			<button id="searchBtn" onclick="bingsearch()" >  &nbsp; &nbsp; Bing &nbsp; &nbsp;</button>&nbsp;&nbsp;&nbsp;
 			<button id="searchBtn" onclick="baidusearch()" >  &nbsp; 百度一下 &nbsp;</button>
 		</div>
 
